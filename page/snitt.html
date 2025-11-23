@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)https://dl.dropboxusercontent.com/u/3048596/snitt/main.html -->
+<html lang="hu"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>snitt</title>
+<style type="text/css"> 
+
+
+html, body { background-color: #333; color: #eee; margin: 0; padding: 0; height: 100%; }
+#container { min-height: 100%; position: relative; }
+#header { padding-left: 10px; line-height: 2em; height: 2em; font-family: "trebuchet ms", sans-serif; font-size: 125%; background-color: #302037; color: #ffe; }
+#menu { background-color: black; padding-left: 10px; height: 2em; line-height: 2em; }
+#rmenu { float: right; padding: 0; background: #000; padding-right: 3px; }
+#body { width: 100%; }
+
+#footer { position: absolute; bottom: 0; width: 100%; height: 30px; border-top: 1px solid #222;}
+#copyright { padding: 5px; padding-right: 30px; text-align: right; color: #777; }
+#footer, #copyright { background: #272727; }
+
+.category { font-weight: bold; font-size: 125%; padding-top: 20px; padding-left: 5px;}
+.descCell { padding-left: 15px; padding-right: 15px; width: 150px; }
+.inputCell { width: 50px; text-align: center; }
+.sizingTable { width: 100%; }
+.sizeInput { width: 100%; } 
+.page { width: 100%; overflow: auto; }
+.hpanel0 { float: left; border-right: 1px solid black; }
+.hpanel1 { float: left; }
+.vpanel0 { border-bottom: 1px solid black; }
+.vpanel1 {}
+
+#scrollDiv { overflow: auto; }
+
+#leftbox { background-color: #222; }
+#settings { background-color: #111; }
+#settings table { padding-top: 5px; }
+
+
+//#leftPanel { overflow: auto; min-height: 100px; background: #222; border-right: 1px solid black; }
+//#rightPanel { float: left; }
+//.box { background: rgba(10,10,10,.5); }
+
+//pre { border-top: 2px solid black; }
+div,svg,canvas,pre { padding: 0; margin: 0; }
+span { padding: 5px; }
+img { background-color: #aaa; }
+svg { display: none; }
+
+a { padding: 5px; text-decoration: none; color: #eee; }
+a.inactive:hover { color: #ffcc33; }
+a.active { font-weight: bold; }
+a.inactive {}
+
+#rmenu a { padding-left: 10px; padding-right: 10px; padding-top: 3px; }
+#rmenu a.active { background: #333; font-weight: normal; }
+
+
+
+</style>
+</head>
+<body>
+
+<div id="container">
+    <div id="header">- - snitt - - 8&lt; - -</div>
+
+    <div id="menu">
+        <span>Szerkesztések</span>
+        <div id="rmenu"><a href="https://dl.dropboxusercontent.com/u/3048596/snitt/main.html#canvas" class="active" onclick="setMode(0); blur();">Canvas</a><a href="https://dl.dropboxusercontent.com/u/3048596/snitt/main.html#svg" class="inactive" onclick="setMode(1); blur();">SVG</a></div>
+     · <a class="active" id="draft0" href="https://dl.dropboxusercontent.com/u/3048596/snitt/main.html#Nadrág" onclick="selectDraft(0); blur();">Nadrág</a> · <a class="inactive" id="draft1" href="https://dl.dropboxusercontent.com/u/3048596/snitt/main.html#Ruha" onclick="selectDraft(1); blur();">Ruha</a> · <a class="inactive" id="draft2" href="https://dl.dropboxusercontent.com/u/3048596/snitt/main.html#Kavics" onclick="selectDraft(2); blur();">Kavics</a> · <a class="inactive" id="draft3" href="https://dl.dropboxusercontent.com/u/3048596/snitt/main.html#Babzsák" onclick="selectDraft(3); blur();">Babzsák</a> · <a class="inactive" id="draft4" href="https://dl.dropboxusercontent.com/u/3048596/snitt/main.html#Curve" onclick="selectDraft(4); blur();">Curve</a></div>
+    <div id="body" style="width: 1089px; height: 617px;"><div class="hpanel0" id="leftbox" style="width: 270px; height: 617px;"><div class="vpanel0" id="sizing" style="width: 270px; height: 556px;"><div id="scrollDiv" style="width: 270px; height: 556px;"><table><tbody><tr><td colspan="2" class="category">Főméretek</td></tr><tr><td class="descCell">Derékbőség</td><td class="inputCell"><input type="text" value="70" class="sizeInput"></td></tr><tr><td class="descCell">Csípőbőség</td><td class="inputCell"><input type="text" value="92" class="sizeInput"></td></tr><tr><td class="descCell">Oldalhossza</td><td class="inputCell"><input type="text" value="108" class="sizeInput"></td></tr><tr><td class="descCell">Üléshossza</td><td class="inputCell"><input type="text" value="27" class="sizeInput"></td></tr><tr><td class="descCell">Térdbőség</td><td class="inputCell"><input type="text" value="38" class="sizeInput"></td></tr><tr><td class="descCell">Aljabőség</td><td class="inputCell"><input type="text" value="38" class="sizeInput"></td></tr><tr><td class="descCell">Varrásszélesség</td><td class="inputCell"><input type="text" value="1" class="sizeInput"></td></tr><tr><td colspan="2" class="category">Igazítások</td></tr><tr><td class="descCell">Rövidülés</td><td class="inputCell"><input type="text" value="3" class="sizeInput"></td></tr><tr><td class="descCell">Eleje derékformázó</td><td class="inputCell"><input type="text" value="0" class="sizeInput"></td></tr><tr><td class="descCell">Háta derékformázó</td><td class="inputCell"><input type="text" value="2" class="sizeInput"></td></tr><tr><td class="descCell">Fenékdomborulat</td><td class="inputCell"><input type="text" value="4" class="sizeInput"></td></tr><tr><td class="descCell">Háta öltöztetés</td><td class="inputCell"><input type="text" value="0.5" class="sizeInput"></td></tr><tr><td colspan="2" class="category">Közepe ívek</td></tr><tr><td class="descCell">Hátaközepe ívelés</td><td class="inputCell"><input type="text" value="2" class="sizeInput"></td></tr><tr><td class="descCell">Elejeközepe ívelés</td><td class="inputCell"><input type="text" value="2" class="sizeInput"></td></tr><tr><td colspan="2" class="category">Széle ívek</td></tr><tr><td class="descCell">Hátaszéle ívelés</td><td class="inputCell"><input type="text" value="2" class="sizeInput"></td></tr><tr><td class="descCell">Elejeszéle ívelés</td><td class="inputCell"><input type="text" value="2" class="sizeInput"></td></tr><tr><td class="descCell">Hátaszéle ív aránya</td><td class="inputCell"><input type="text" value="0.7" class="sizeInput"></td></tr><tr><td class="descCell">Elejeszéle ív aránya</td><td class="inputCell"><input type="text" value="0.7" class="sizeInput"></td></tr><tr><td class="descCell">Háta csípőívelés</td><td class="inputCell"><input type="text" value="4" class="sizeInput"></td></tr></tbody></table></div></div><div class="vpanel1" id="settings" style="width: 270px; height: 60px;"><table><tbody><tr><td class="descCell">Zoom megtartása</td><td class="inputCell"><input type="checkbox" class="sizeInput"></td></tr><tr><td class="descCell">Segédvonalak</td><td class="inputCell"><input type="checkbox" class="sizeInput"></td></tr></tbody></table></div></div><div class="hpanel1" style="width: 818px; height: 617px;"><div class="vpanel0" style="width: 818px; height: 616px;"><canvas width="818" height="616" style="display: block;"></canvas><svg version="1.1"></svg><img style="display: none; width: 818px; height: 616px;"></div><div class="vpanel1" style="width: 818px; height: 0px;"><pre style="width: 818px; height: 0px;"></pre></div></div></div>
+    <!--<div id="footer"><div id="copyright">Copyright &copy; 2012 · des.Moi</div></div>-->
+</div>
+
+
+
+<script type="text/javascript" src="./snitt_files/boxmodel.js"></script>
+<script type="text/javascript" src="./snitt_files/framework.js"></script>
+<script type="text/javascript" src="./snitt_files/glyphs.js"></script>
+
+<script type="text/javascript" src="./snitt_files/coord.js"></script>
+<script type="text/javascript" src="./snitt_files/polyline.js"></script>
+<script type="text/javascript" src="./snitt_files/bounds.js"></script>
+<script type="text/javascript" src="./snitt_files/line.js"></script>
+<script type="text/javascript" src="./snitt_files/draw.js"></script>
+<script type="text/javascript" src="./snitt_files/pattern.js"></script>
+<script type="text/javascript" src="./snitt_files/pants.js"></script>
+<script type="text/javascript" src="./snitt_files/shirt.js"></script>
+<script type="text/javascript" src="./snitt_files/curves.js"></script>
+<script type="text/javascript" src="./snitt_files/beanbag.js"></script>
+<script type="text/javascript" src="./snitt_files/pebble.js"></script>
+
+
+<script language="javascript">
+    createLayout();
+    createView();
+    createDefaultFont();
+
+    addDraft("Nadrág", pants);
+    addDraft("Ruha", shirt);
+
+    addDraft("Kavics", pebble);
+    addDraft("Babzsák", beanbag);
+    addDraft("Curve", curves);
+
+    
+    selectDraft(0);
+
+
+</script>
+
+
+
+
+</body></html>

@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8" />
+<title>snitt</title>
+<style type="text/css">
+
+
+html, body { background-color: #333; color: #eee; margin: 0; padding: 0; height: 100%; font-family: sans-serif; }
+#container { min-height: 100%; position: relative; }
+#header { padding-left: 10px; line-height: 2em; height: 2em; font-family: "trebuchet ms", sans-serif; font-size: 125%; background-color: #302037; color: #ffe; }
+#menu { background-color: black; padding-left: 10px; height: 2em; line-height: 2em; }
+#rmenu { float: right; padding: 0; background: #000; padding-right: 3px; }
+#body { width: 100%; }
+
+#footer { position: absolute; bottom: 0; width: 100%; height: 30px; border-top: 1px solid #222;}
+#copyright { padding: 5px; padding-right: 30px; text-align: right; color: #777; }
+#footer, #copyright { background: #272727; }
+
+.category { font-weight: bold; font-size: 125%; padding-top: 20px; padding-left: 5px;}
+.descCell { padding-left: 15px; padding-right: 15px; width: 150px; }
+.inputCell { width: 50px; text-align: center; }
+.sizingTable { width: 100%; }
+.sizeInput { width: 100%; }
+.page { width: 100%; overflow: auto; }
+.hpanel0 { float: left; border-right: 1px solid black; }
+.hpanel1 { float: left; }
+.vpanel0 { border-bottom: 1px solid black; }
+.vpanel1 {}
+
+#scrollDiv { overflow: auto; }
+
+#leftbox { background-color: #222; }
+#settings { background-color: #111; }
+#settings table { padding-top: 5px; }
+
+
+//#leftPanel { overflow: auto; min-height: 100px; background: #222; border-right: 1px solid black; }
+//#rightPanel { float: left; }
+//.box { background: rgba(10,10,10,.5); }
+
+//pre { border-top: 2px solid black; }
+div,svg,canvas,pre { padding: 0; margin: 0; }
+span { padding: 5px; }
+img { background-color: #aaa; }
+svg { display: none; }
+
+a { padding: 5px; text-decoration: none; color: #eee; }
+a.inactive:hover { color: #ffcc33; }
+a.active { font-weight: bold; }
+a.inactive {}
+
+#rmenu a { padding-left: 10px; padding-right: 10px; padding-top: 3px; }
+#rmenu a.active { background: #333; font-weight: normal; }
+
+
+
+</style>
+</head>
+<body>
+
+<div id="container">
+    <div id="header">- - snitt - - 8&lt; - -</div>
+
+    <div id="menu">
+        <span>Szerkesztések</span>
+        <div id="rmenu"></div>
+    </div>
+    <div id="body"></div>
+    <!--<div id="footer"><div id="copyright">Copyright &copy; 2012 · des.Moi</div></div>-->
+</div>
+
+
+
+<script type="text/javascript" src="class.js"></script>
+<script type="text/javascript" src="boxmodel.js"></script>
+<script type="text/javascript" src="framework.js"></script>
+<script type="text/javascript" src="glyphs.js"></script>
+
+<script type="text/javascript" src="coord.js"></script>
+<script type="text/javascript" src="polyline.js"></script>
+<script type="text/javascript" src="bounds.js"></script>
+<script type="text/javascript" src="line.js"></script>
+<script type="text/javascript" src="draw.js"></script>
+<script type="text/javascript" src="pattern.js"></script>
+<script type="text/javascript" src="pants.js"></script>
+<script type="text/javascript" src="skirt.js"></script>
+<script type="text/javascript" src="dress.js"></script>
+<script type="text/javascript" src="curves.js"></script>
+<script type="text/javascript" src="beanbag.js"></script>
+<script type="text/javascript" src="pebble.js"></script>
+<script type="text/javascript" src="knickers.js"></script>
+
+
+
+<script language="javascript">
+    createLayout();
+    createView();
+    createDefaultFont();
+
+    addDraft("Ruha", dress);                // 0
+    addDraft("Nadrág", pants);              // 1
+    addDraft("Szoknya", skirt);             // 2
+    addDraft("Babzsák", beanbag);           // 3
+    addDraft("Kavics", pebble);             // 4
+    addDraft("Sarokvarrás", cornercut);     // 5
+    addDraft("Curve", curves);              // 6
+    addDraft("Franciabugyi", knickers);     // 7
+
+
+    selectDraft(5);
+
+
+</script>
+
+
+</body>
+</html>

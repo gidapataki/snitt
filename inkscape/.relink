@@ -1,0 +1,19 @@
+#!/bin/bash
+
+
+EXTDIR="$HOME/.config/inkscape/extensions"
+PWD=$(pwd)
+
+
+for f in "$EXTDIR"/*
+do
+    test -e "$f" || rm -- "$f"
+done
+
+
+for f in *.py *.inx
+do
+	TARGET="$EXTDIR/$f"
+	test -e "$TARGET" || ln -s "$PWD/$f" "$TARGET"
+done
+

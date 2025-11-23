@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <_name>Pagegrid</_name>
+    <id>org.inkscape.pagegrid</id>
+    
+	<dependency type="extension">org.inkscape.output.svg.inkscape</dependency>
+	
+	<dependency type="executable" location="extensions">pagegrid.py</dependency>
+	<dependency type="executable" location="extensions">inkex.py</dependency>
+		
+    <effect needs-live-preview="false">
+                <object-type>all</object-type>
+                <effects-menu>
+                      <submenu _name="Snitt"/>
+                </effects-menu>
+    </effect>
+    
+    <script>
+        <command reldir="extensions" interpreter="python">pagegrid.py</command>
+    </script>
+    
+</inkscape-extension>
